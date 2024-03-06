@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="rtl">
+    
+<!-- Mirrored from demo.rayanik.com/modiran/light/tables.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Dec 2023 11:35:48 GMT -->
+<head>
+    <title>پنل سورنا</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="fontiran.com:license" content="NE29X">
+    <link rel="shortcut icon" href="assets/images/favicon2.png">
+    <link href="assets/plugins/bootstrap/bootstrap5/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link href="assets/plugins/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="assets/plugins/simple-line-icons/css/simple-line-icons.min.css" rel="stylesheet">
+    <link href="assets/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="assets/plugins/switchery/dist/switchery.min.css" rel="stylesheet">
+    <link href="assets/plugins/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+    <link href="assets/plugins/paper-ripple/dist/paper-ripple.min.css" rel="stylesheet">
+    <link href="assets/plugins/iCheck/skins/square/_all.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/colors.css" rel="stylesheet">
+        <!-- END CSS -->
+        <link href="assets/plugins/kamadatepicker/kamadatepicker.min.css" rel="stylesheet">
+        <script src="assets/js/pages/axios.js."></script>  
+    </head>
+    <style>
+        h6.logoTitle{
+            color: rgb(221, 221, 221);
+        }
+        a.logo-con{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        button.view{
+            border-radius: 10px;
+            border: none;
+            background-color: #705bac;
+            color: aliceblue;
+            font-size: 12px class="number";
+        }
+       </style>
+    <body class="active-ripple theme-darkpurple fix-header sidebar-extra bg-1">
+        <!-- BEGIN LOEADING -->
+        <div id="loader">
+            <div class="spinner"></div>
+        </div><!-- /loader -->
+        <!-- END LOEADING -->
+        
+        <!-- BEGIN HEADER -->
+        <div class="navbar navbar-fixed-top" id="main-navbar">            
+            <div class="header-right">
+                <a href="dashboard2.html" class="logo-con">
+                    <img src="assets/images/favicon2.png" class="img-responsive center-block" width="40px" alt="لوگو  سورنا">
+                    <h6 class="logoTitle">
+                        Sorena
+                      </h6>
+                </a>
+            </div><!-- /.header-right -->
+            <div class="header-left">
+                <div class="top-bar">                        
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>                                
+                            <a href="#" class="btn" id="toggle-sidebar">
+                                <span class="menu"></span>
+                            </a>
+                        </li>
+                        <li>                                
+                            <a href="#" class="btn open" id="toggle-sidebar-top">
+                                <i class="icon-user-following"></i>
+                            </a>
+                        </li>
+                        <li>                                
+                            <a href="#" class="btn" id="toggle-dark-mode">
+                                <i class="icon-bulb"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="dropdown">
+                            <a href="#" class="btn" id="toggle-fullscreen">
+                                <i class="icon-size-fullscreen"></i>
+                            </a>
+                        </li>
+                        <li class="dropdown dropdown-messages">
+                            <a href="#" class="dropdown-toggle btn" data-bs-toggle="dropdown">
+                                <i class="icon-envelope"></i>
+                                <span class="badge badge-primary">
+                                    4
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu has-scrollbar">
+                                <li class="dropdown-header clearfix">
+                                    <span class="float-start">
+                                        <a href="#" rel="tooltip" title="خواندن همه" data-placement="left">
+                                            <i class="icon-eye"></i>
+                                        </a>
+                                        شما 4 پیام تازه دارید.
+                                    </span>
+                                </li>
+                                <li class="dropdown-body">
+                                    <ul class="dropdown-menu-list" >
+                                        <li class="clearfix">
+                                            <a href="#">
+                                                <p class="clearfix">
+                                                    <strong class="float-start">
+                                                        <img src="assets/images/user/32.png" class="img-circle" alt="">
+                                                        سهراب سپهری
+                                                    </strong> 
+                                                    <small class="float-end text-muted">
+                                                        <i class="icon-clock"></i>
+                                                        ده دقیقه پیش
+                                                    </small>
+                                                </p>
+                                                <p>پیام پرمهرتان دریافت شد!</p>
+                                            </a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#">
+                                                <p class="clearfix">
+                                                    <strong class="float-start">
+                                                        <img src="assets/images/user/32.png" class="img-circle" alt="">
+                                                        شفیعی کدکنی
+                                                    </strong> 
+                                                    <small class="float-end text-muted">
+                                                        <i class="icon-clock"></i>
+                                                        سی دقیقه پیش
+                                                    </small>
+                                                </p>
+                                                <p>بسته ارسالی شما به دستم رسید.</p>
+                                            </a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#">
+                                                <p class="clearfix">
+                                                    <strong class="float-start">
+                                                        <img src="assets/images/user/32.png" class="img-circle" alt="">
+                                                        قیصر امین پور
+                                                    </strong> 
+                                                    <small class="float-end text-muted">
+                                                        <i class="icon-clock"></i>
+                                                        یک ساعت پیش
+                                                    </small>
+                                                </p>
+                                                <p>مجموعه آثار بنده را ببینید.</p>
+                                            </a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#">
+                                                <p class="clearfix">
+                                                    <strong class="float-start">
+                                                        <img src="assets/images/user/32.png" class="img-circle" alt="">
+                                                        مهدی اخوان ثالث
+                                                    </strong> 
+                                                    <small class="float-end text-muted">
+                                                        <i class="icon-clock"></i>
+                                                        دو ساعت پیش
+                                                    </small>
+                                                </p>
+                                                <p>با تشکر...</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-footer clearfix">
+                                    <a href="#">
+                                        <i class="icon-list fa-flip-horizontal"></i>
+                                        مشاهده همه پیام ها
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown-announces">
+                            <a href="#" class="dropdown-toggle btn" data-bs-toggle="dropdown">
+                                <i class="icon-bell"></i>
+                                <span class="badge badge-success">
+                                    5
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu has-scrollbar">
+                                <li class="dropdown-header clearfix">
+                                    <span class="float-start">
+                                        <a href="#" rel="tooltip" title="خواندن همه" data-placement="left">
+                                            <i class="icon-eye"></i>
+                                        </a>
+                                        <span>
+                                            شما 8 اعلان تازه دارید.
+                                        </span>
+                                    </span>
+
+                                </li>
+                                <li class="dropdown-body">
+                                    <ul class="dropdown-menu-list" >
+                                        <li class="clearfix">
+                                            <a href="#">
+                                                <p class="clearfix">
+                                                    <strong class="float-start">عباس دوران</strong> 
+                                                    <small class="float-end text-muted">
+                                                        <i class="icon-clock"></i>
+                                                        21:30
+                                                    </small>
+                                                </p>
+                                                <p>بسته ارسالی شما به دستم رسید.</p>
+                                            </a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#">
+                                                <p class="clearfix">
+                                                    <strong class="float-start">حسن باقری</strong> 
+                                                    <small class="float-end text-muted">
+                                                        <i class="icon-clock"></i>
+                                                        20:20
+                                                    </small>
+                                                </p>
+                                                <p>از محبت شما ممنونم.</p>
+                                            </a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#">
+                                                <p class="clearfix">
+                                                    <strong class="float-start">مدیر کل</strong> 
+                                                    <small class="float-end text-muted">
+                                                        <i class="icon-clock"></i>
+                                                        19:20
+                                                    </small>
+                                                </p>
+                                                <p>سفارش شما ارسال گردید..</p>
+                                            </a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#">
+                                                <p class="clearfix">
+                                                    <strong class="float-start">مدیر مالی</strong> 
+                                                    <small class="float-end text-muted">
+                                                        <i class="icon-clock"></i>
+                                                        17:40
+                                                    </small>
+                                                </p>
+                                                <p>درخواست فیش حقوقی</p>
+                                            </a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#">
+                                                <p class="clearfix">
+                                                    <strong class="float-start">ابراهیم همت</strong> 
+                                                    <small class="float-end text-muted">
+                                                        <i class="icon-clock"></i>
+                                                        15:45
+                                                    </small>
+                                                </p>
+                                                <p>پیام های مرا دنبال کنید.</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-footer clearfix">
+                                    <a href="#">
+                                        <i class="icon-list fa-flip-horizontal"></i>
+                                        مشاهده همه اعلانات  
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown dropdown-user">
+                            <a href="#" class="dropdown-toggle dropdown-hover" data-bs-toggle="dropdown">
+                                <img src="assets/images/user/48.png" alt="عکس پرفایل" class="img-circle img-responsive">
+                                <span>حمید آفرینش فر</span>
+                                <i class="icon-arrow-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="edit_profile.html">
+                                        <i class="icon-note"></i>
+                                        ویرایش پروفایل
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="change_password.html">
+                                        <i class="icon-key"></i>
+                                        تغییر رمز عبور
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="change_password2.html">
+                                        <i class="icon-key"></i>
+                                        فراموشی رمز عبور
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="chat.html">
+                                        <span class="badge badge-primary float-end"> 14 </span>
+                                        <i class="icon-envelope"></i>
+                                        تیکت های جدید 
+                                    </a>
+                                </li>
+                               
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="login.html">
+                                        <i class="icon-power"></i>
+                                        خروج
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul><!-- /.navbar-left -->
+                </div><!-- /.top-bar -->
+            </div><!-- /.header-left -->
+        </div><!-- /.navbar -->
+        <!-- END HEADER -->
+              
+        <!-- BEGIN WRAPPER -->
+        <div id="wrapper">
+
+            <div id="sidebar">
+                <div class="sidebar-top">
+                  
+                </div><!-- /.sidebar-top -->
+                <div class="side-menu-container">
+                    <ul class="metismenu" id="side-menu">
+                        <li class="open active conditional-bg">
+                            <li>
+                                <a href="dashboard2.html" class="">
+                                    <i class="icon-home"></i>
+                                    <span>پیشخوان </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="users.html" class="">
+                                    <i class="icon-user-follow"></i>
+                                    <span>کاربران </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="order.html" class="">
+                                    <i class="icon-basket-loaded fa-flip-horizontal"></i>
+                                    <span>معاملات </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ticket.html" class="">
+                                    <i class="icon-bubble"></i>
+                                    <span> تیکت ها  </span>
+                                </a>  
+                            </li>
+                            <li>
+                                <a href="harvest.html" class="">
+                                    <i class="icon-layers"></i>
+                                    <span>  برداشت وجه  </span>
+                                </a>  
+                            </li>
+                            <li>
+                                <a href="setting.html" class="current">
+                                    <i class="icon-settings"></i>
+                                    <span> تنظیمات  </span>
+                                </a>  
+                            </li>
+                            <li>
+                                <a href="tables.html" class="">
+                                    <i class="icon-list fa-flip-horizontal"></i>
+                                    <span>جدول تحلیل ها  </span>
+                                </a>  
+                            </li>
+                            <li>
+                                <a href="orderPage.html" class="">
+                                    <i class="icon-basket-loaded fa-flip-horizontal"></i>
+                                    <span>  سفارشات  </span>
+                                </a>  
+                            </li>
+                            <li>
+                                <a href="orderPage.html" class="">
+                                    <i class="icon-speech"></i>
+                                    <span>  گزارشات  </span>
+                                </a>  
+                            </li>
+                    </ul><!-- /#side-menu -->
+                </div><!-- /.side-menu-container -->
+            </div><!-- /#sidebar -->
+            <!-- END SIDEBAR -->            
+            <!-- BEGIN PAGE CONTENT -->
+            <div id="page-content">
+                <div id="inner-content">
+                    <div class="row">                    
+                        <!-- BEGIN BREADCRUMB -->
+                        <div class="col-md-12">
+                            <div class="breadcrumb-box shadow"> 
+                                <ul class="breadcrumb">
+                                    <li><a href="dashboard2.html">برگشت به پیشخوان</a></li>
+                                    <li style="font-size: 16px; font-weight: 400; margin-top: 5px;">❯</li>
+                                    <li><a href="setting.html"> تنظیمات </a></li>                                    
+                                                                  
+                                </ul>
+                              
+                            </div><!-- /.breadcrumb-box -->
+                        </div><!-- /.col-md-12 -->
+                        <!-- END BREADCRUMB -->                        
+                        
+                  
+
+                        <div class="col-lg-12">
+                            <div class="portlet box shadow">
+                                <div class="portlet-heading">
+                                    <div class="portlet-title">
+                                        <h4 class="title">                                        
+                                            <i class="icon-frane"></i>
+                                              تنظیمات 
+                                        </h4>
+                                    </div><!-- /.portlet-title -->
+                                 
+                                </div><!-- /.portlet-heading -->
+                                <div class="portlet-body" style="margin-top: 50px;">
+                                    <ul class="nav nav-tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-bs-toggle="tab" href="#tab1"> تنظیمات عمومی </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#tab2">ریست معاملات </a>
+                                        </li>
+                                      
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div id="tab1" class="tab-pane fade active show">
+                                            <div class="col-12">
+                                               
+                                                    <div class="portlet-heading">
+                                                        <div class="portlet-title">
+                                                            <h6 class="title mt-3">                                        
+                                                                <i class="icon-settings"></i>
+                                                                تنظیمات عمومی
+                                                            </h6>
+                                                        </div><!-- /.portlet-title -->
+                                                        
+                                                    </div><!-- /.portlet-heading -->
+                                                    <div class="portlet-body">
+                                                       
+                                                            <div class="form-body">
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-3">نرخ فعلی </label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" placeholder="نرخ فعلی">
+                                                                    </div>
+                                                                </div><!-- /.form-group -->
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-3"> میزان کار مزد</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" placeholder=" میزان کار مزد">
+                                                                    </div>
+                                                                </div><!-- /.form-group -->
+                                                               
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-3">گیرنده</label>
+                                                                    <div class="col-sm-9">
+                                                                        <select class="form-select">
+                                                                            <option value="0">بخش فنی</option>
+                                                                            <option value="1">بخش مالی</option>
+                                                                            <option value="2">بخش اداری</option>
+                                                                            <option value="3">بخش فروش</option>
+                                                                            <option value="4">اپراتور</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div><!-- /.form-group -->
+                                                                <div class="form-group">
+                                                                    <label>                            
+                                                                        
+                                                                        فعال سیستم یکسان ساز
+                                                                    </label>
+                                                                    <span>
+                                                                        <label>                            
+                                                                            <input name="radio" type="radio" >
+                                                                            فعال
+                                                                        </label>
+                                                                        <label>                            
+                                                                            <input name="radio" type="radio" >
+                                                                            غیر فعال
+                                                                        </label>
+                                                                    </span>
+                                                                </div>
+
+
+
+                                                            </div><!-- /.form-body -->
+                    
+                                                            <div class="form-actions">
+                                                                <button type="submit" class="btn btn-success btn-round" onclick="sendFileFun()" >
+                                                                    <i class="icon-check"></i>
+                                                                    ذخیره
+                                                                <div class="paper-ripple"><div class="paper-ripple__background"></div><div class="paper-ripple__waves"></div></div>
+                                                            </button>
+                                                                
+                                                            </div><!-- /.form-actions -->
+                                                       
+                                                    </div><!-- /.portlet-body -->
+                                                </div><!-- /.portlet -->
+                    
+                                           
+                                        </div>
+                                        <div id="tab2" class="tab-pane fade">
+                                            <div class="col-12">
+                                               
+                                                <div class="portlet-heading">
+                                                    <div class="portlet-title">
+                                                        <h6 class="title mt-3">                                        
+                                                            
+                                                            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
+                                                                <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V256c0 17.7 14.3 32 32 32s32-14.3 32-32V32zM143.5 120.6c13.6-11.3 15.4-31.5 4.1-45.1s-31.5-15.4-45.1-4.1C49.7 115.4 16 181.8 16 256c0 132.5 107.5 240 240 240s240-107.5 240-240c0-74.2-33.8-140.6-86.6-184.6c-13.6-11.3-33.8-9.4-45.1 4.1s-9.4 33.8 4.1 45.1c38.9 32.3 63.5 81 63.5 135.4c0 97.2-78.8 176-176 176s-176-78.8-176-176c0-54.4 24.7-103.1 63.5-135.4z"/>
+                                                            </svg>
+                                                            ریست معاملات  
+                                                        </h6>
+                                                        
+                                                    </div><!-- /.portlet-title -->
+                                                    
+                                                </div><!-- /.portlet-heading -->
+                                                <div class="portlet-body">
+                                                    
+                                                        <div class="form-body">
+                                                            <div class="row">
+
+                                                                <div class="form-group row col-sm-12 col-md-6">
+                                                                    <label class="col-sm-12">ریست معاملات امروز </label>
+                                                                    <div class="col-sm-12">
+                                                                        <span class="btn btn-info mt-3"  data-bs-toggle="modal" data-bs-target="#modal">ریست کردن معاملات امروز</span>
+                                                                        <p class="p-3"></p>
+                                                                    </div>
+                                                                  
+                                                                </div><!-- /.form-group -->
+                                                               <div class="col-sm-12 col-md-6">
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-12"> ریست معاملات با بازه</label>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-2"> از تاریخ </label>
+                                                                    <div class="col-sm-4">
+                                                                        
+                                                                        <input type="text" class="form-control" id="kama-datepicker-empty" placeholder=" تاریخ شروع">
+                                                                        <!-- <input type="text" class="form-control" placeholder="تاریخ شروع" id="startDate"> -->
+                                                                    </div>
+                                                                    <label class="col-sm-2"> تا تاریخ </label>
+                                                                    <div class="col-sm-4">
+                                                                        <!-- <input type="text" class="form-control" placeholder="تاریخ اتمام" id="endDate"> -->
+                                                                        <input type="text" class="form-control" id="kama-datepicker-empty2" placeholder="تاریخ اتمام ">
+                                                                    </div>
+                                                                </div><!-- /.form-group -->
+                                                               
+                                                                <div class="col-sm-12">
+                                                                    <span class="btn btn-info mt-3" data-bs-toggle="modal" data-bs-target="#modal2" onclick="updateModalText()">ریست کردن بازه مشخص</span>
+                                                                    <p class="p-3"></p>
+                                                                </div>
+                                                               </div>
+                                                            </div>
+                                                          
+                                                        </div><!-- /.form-body -->
+                
+                                                      
+                                                  
+                                                </div><!-- /.portlet-body -->
+                                            </div><!-- /.portlet -->
+                
+                                       
+                                        </div>
+                                       
+                                    </div>
+                                </div><!-- /.portlet-body -->
+
+                            </div><!-- /.portlet -->
+                        </div><!-- /.col-lg-12 -->
+
+                </div><!-- /#inner-content -->
+            </div><!-- /#page-content -->
+            <!-- END PAGE CONTENT -->
+
+        </div><!-- /#wrapper -->
+        <!-- END WRAPPER -->
+ 
+        
+        <!-- BEGIN SETTING -->
+        <div class="settings d-none d-sm-block">
+            <a href="#" class="btn" id="toggle-setting">
+                <i class="icon-settings"></i>
+            </a>
+            
+            <div class="setting-content">               
+                <h3 class="text-center">تنظیمات</h3>
+                <div class="fix-header-box">
+                    <p class="h6">
+                        هدر ثابت: 
+                        <span class="float-end">
+                            <input type="checkbox" class="fix-header-switch normal" checked>
+                        </span>
+                    </p>
+                </div><!-- /.fix-header-box -->
+                <hr class="light">
+                <div class="toggle-sidebar-box">
+                    <p class="h6">
+                        جمع کردن سایدبار: 
+                        <span class="float-end">
+                            <input type="checkbox" class="toggle-sidebar-switch normal">
+                        </span>
+                    </p>
+                </div><!-- /.toggle-sidebar-box -->
+                <hr class="light">
+                <div class="toggle-sidebar-box">
+                    <p class="h6">
+                        سایدبار خلاقانه: 
+                        <span class="float-end">
+                            <input type="checkbox" class="creative-sidebar-switch normal">
+                        </span>
+                    </p>
+                </div><!-- /.toggle-sidebar-box -->
+                <hr class="light">
+                <div class="theme-colors">
+                    <p class="h6">رنگ قالب : </p>
+                    <a class="btn btn-round btn-darkpurple ripple-effect active" data-color="darkpurple"></a>
+                    <a class="btn btn-round btn-blue ripple-effect" data-color="blue"></a>
+                    <a class="btn btn-round btn-red ripple-effect" data-color="red"></a>
+                    <a class="btn btn-round btn-green ripple-effect" data-color="green"></a>
+                    <a class="btn btn-round btn-orange ripple-effect" data-color="orange"></a>
+                    <a class="btn btn-round btn-purple ripple-effect" data-color="purple"></a>
+                    <a class="btn btn-round btn-deeporange ripple-effect" data-color="deeporange"></a>
+                    <a class="btn btn-round btn-cyan ripple-effect" data-color="cyan"></a>
+                    <a class="btn btn-round btn-rose ripple-effect" data-color="rose"></a>
+                    <a class="btn btn-round btn-lime ripple-effect" data-color="lime"></a>
+                    <a class="btn btn-round btn-darkorange ripple-effect" data-color="darkorange"></a>
+                    <a class="btn btn-round btn-darkblue ripple-effect" data-color="darkblue"></a>
+                </div><!-- /.theme-colors -->
+                <hr class="light">
+                <div class="sidebar-bg-box">
+                    <p class="h6 bold">تصویر سایدبار: </p>
+                    <ul class="sidebar-bg">
+                        <li class="active">
+                            <a href="#" href="javascript:void(0)">
+                                <img src="assets/images/sidebar-bg/thumb/1.jpg" data-bg="1" alt="sidebar background">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" href="javascript:void(0)">
+                                <img src="assets/images/sidebar-bg/thumb/2.jpg" data-bg="2"  alt="sidebar background">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" href="javascript:void(0)">
+                                <img src="assets/images/sidebar-bg/thumb/3.jpg" data-bg="3"  alt="sidebar background">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" href="javascript:void(0)">
+                                <img src="assets/images/sidebar-bg/thumb/4.jpg" data-bg="4"  alt="sidebar background">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" href="javascript:void(0)">
+                                <img src="assets/images/sidebar-bg/thumb/5.jpg" data-bg="5"  alt="sidebar background">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" href="javascript:void(0)">
+                                <img src="assets/images/sidebar-bg/thumb/no-image.png" data-bg=""  alt="no image">
+                            </a>
+                        </li>
+                    </ul>
+                </div><!-- /.sidebar-bg-box -->
+               
+            </div><!-- /.setting-content -->
+
+
+           
+        </div><!-- /.settings -->
+        <!-- END SETTING -->
+        
+        <!-- BEGIN CODE MODAL -->
+        <div class="modal fade" id="code-modal" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn btn-default btn-round btn-icon float-start" id="btn-copy"><i class="far fa-copy"></i></button>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">کپی کردن کدها</h4>
+                    </div>
+                    <div class="modal-body"></div>
+                </div> <!-- /.modal-content -->
+            </div> <!-- /.modal-dialog -->
+        </div> <!-- /.modal -->
+        <!-- END CODE MODAL --> 
+        <div id="modal" class="modal fade" role="dialog" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                        <h4 class="modal-title"> ریست کردن معاملات امروز</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <p class="text-center m-t-30 m-b-40">
+                                   
+                                    <svg  class="border border-primary img-circle text-primary p-20" xmlns="http://www.w3.org/2000/svg" height="64" width="64" viewBox="0 0 512 512">
+                                        <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V256c0 17.7 14.3 32 32 32s32-14.3 32-32V32zM143.5 120.6c13.6-11.3 15.4-31.5 4.1-45.1s-31.5-15.4-45.1-4.1C49.7 115.4 16 181.8 16 256c0 132.5 107.5 240 240 240s240-107.5 240-240c0-74.2-33.8-140.6-86.6-184.6c-13.6-11.3-33.8-9.4-45.1 4.1s-9.4 33.8 4.1 45.1c38.9 32.3 63.5 81 63.5 135.4c0 97.2-78.8 176-176 176s-176-78.8-176-176c0-54.4 24.7-103.1 63.5-135.4z"/>
+                                    </svg>
+                                </p>
+                            </div>
+                            <div class="col-lg-12">
+                               
+                                    <div class="col-md-8 col-lg-6 m-auto m-b-10 text-center">
+                                      
+                                            <span class="text-center">
+                                               تمام معاملات امروز ریست بشود !
+                                            </span>
+                                          
+                                       
+                                    </div><!-- /.col-md-8 -->
+                                   
+                                    <div class="col-md-8 col-lg-6 m-auto">
+                                        
+                                        
+                                        <button type="button" class="btn btn-danger btn-block float-end mb-3" data-bs-dismiss="modal">انصراف<div class="paper-ripple"><div class="paper-ripple__background"></div><div class="paper-ripple__waves"></div></div></button>
+                                        <button type="button" class="btn btn-success btn-block mt-4 mb-2" onclick="sendFileFun2()">
+                                            
+                                            ذخیره و ارسال
+                                        <div class="paper-ripple"><div class="paper-ripple__background"></div><div class="paper-ripple__waves"></div></div></button>
+                                    </div><!-- /.col-md-8 -->
+                               
+                            </div><!-- /col-lg-12 -->
+                        </div><!-- /.row -->
+                    </div>
+                    
+                </div>
+            </div>
+        </div>  
+        
+        <div id="modal2" class="modal fade" role="dialog" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                        <h4 class="modal-title"> ریست کردن معاملات امروز</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <p class="text-center m-t-30 m-b-40">
+                                   
+                                    <svg  class="border border-primary img-circle text-primary p-20" xmlns="http://www.w3.org/2000/svg" height="64" width="64" viewBox="0 0 512 512">
+                                        <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V256c0 17.7 14.3 32 32 32s32-14.3 32-32V32zM143.5 120.6c13.6-11.3 15.4-31.5 4.1-45.1s-31.5-15.4-45.1-4.1C49.7 115.4 16 181.8 16 256c0 132.5 107.5 240 240 240s240-107.5 240-240c0-74.2-33.8-140.6-86.6-184.6c-13.6-11.3-33.8-9.4-45.1 4.1s-9.4 33.8 4.1 45.1c38.9 32.3 63.5 81 63.5 135.4c0 97.2-78.8 176-176 176s-176-78.8-176-176c0-54.4 24.7-103.1 63.5-135.4z"/>
+                                    </svg>
+                                </p>
+                            </div>
+                            <div class="col-lg-12">
+                               
+                                    <div class="col-md-8 col-lg-6 m-auto m-b-10 text-center">
+                                      
+                                            <span id="text" class="text-center">
+                                               تمام معاملات در این بازه مشخص شده  ریست بشود !
+                                            </span>
+                                          
+                                       
+                                    </div><!-- /.col-md-8 -->
+                                   
+                                    <div class="col-md-8 col-lg-6 m-auto">
+                                        
+                                        
+                                        <button type="button" class="btn btn-danger btn-block float-end mb-3" data-bs-dismiss="modal">انصراف<div class="paper-ripple"><div class="paper-ripple__background"></div><div class="paper-ripple__waves"></div></div></button>
+                                        <button type="submit" class="btn btn-success btn-block mt-4 mb-2"  onclick="sendFileFun3()">
+                                            
+                                            ذخیره و ارسال
+                                        <div class="paper-ripple"><div class="paper-ripple__background"></div><div class="paper-ripple__waves"></div></div></button>
+                                    </div><!-- /.col-md-8 -->
+                               
+                            </div><!-- /col-lg-12 -->
+                        </div><!-- /.row -->
+                    </div>
+                    
+                </div>
+            </div>
+        </div>  
+        
+        <!-- BEGIN JS -->
+        <script src="assets/plugins/jquery/dist/jquery-3.6.1.min.js"></script>
+        <script src="assets/plugins/bootstrap/bootstrap5/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/plugins/metisMenu/dist/metisMenu.min.js"></script>
+        <script src="assets/plugins/paper-ripple/dist/PaperRipple.min.js"></script>
+        <script src="assets/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="assets/plugins/sweetalert2/dist/sweetalert2.min.js"></script>
+        <script src="assets/plugins/screenfull/dist/screenfull.min.js"></script>
+        <script src="assets/plugins/iCheck/icheck.min.js"></script>
+        <script src="assets/plugins/switchery/dist/switchery.js"></script>
+        <script src="assets/js/core.js"></script>
+        <!-- BEGIN PAGE JAVASCRIPT -->
+        <script src="assets/plugins/kamadatepicker/kamadatepicker.min.js"></script>
+        <script src="assets/js/pages/calendar-kama.js"></script>
+        <!-- END PAGE JAVASCRIPT -->  
+        <script>
+            function updateModalText() {
+                // Get the values of the date inputs
+                var startDate = document.getElementById('kama-datepicker-empty').value;
+                var endDate = document.getElementById('kama-datepicker-empty2').value;
+        
+                // Update the text in the modal
+                document.getElementById('text').innerText = "تمام معاملات در این بازه مشخص شده از تاریخ  " + startDate + " تا تاریخ " + endDate + " ریست بشود!";
+            }
+            const sendFileFun = (id) => {
+            console.log(id);
+            axios.post('https://jsonplaceholder.typicode.com/posts', { id: id, action: 'send' })
+            .then(response => {
+                console.log(response.data);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+        }
+        const sendFileFun2 = (id) => {
+            console.log(id);
+            axios.post('https://jsonplaceholder.typicode.com/posts', { id: id, action: 'reset day' })
+            .then(response => {
+                console.log(response.data);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+        }
+        const sendFileFun3 = (id) => {
+            console.log(id);
+            axios.post('https://jsonplaceholder.typicode.com/posts', { id: id, action: 'reset time' })
+            .then(response => {
+                console.log(response.data);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+        }
+        </script>  
+        <script>
+            // Example initialization
+            kamaDatepicker('kama-datepicker-empty');
+          </script>
+            <script>
+                // Example initialization
+                kamaDatepicker('kama-datepicker-empty2');
+              </script>
+          
+    </body>
+
+<!-- Mirrored from demo.rayanik.com/modiran/light/tables.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Dec 2023 11:35:48 GMT -->
+</html>
